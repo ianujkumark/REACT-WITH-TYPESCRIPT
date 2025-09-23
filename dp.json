@@ -1,0 +1,7 @@
+{
+  "emp": [
+    { "empid": 101, "name": "Anuj Kumar", "designation": "Specialist Programmer" },
+    { "empid": 102, "name": "Akshay Rajput", "designation": "Frontend Developer" },
+    { "empid": 103, "name": "Rajesh Kumar", "designation": "Professor" }
+  ]
+}
