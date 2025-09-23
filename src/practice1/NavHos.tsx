@@ -36,9 +36,10 @@ const NavHos = () => {
                 <Link to='/findblood' style={{ color: "black", textDecoration: "none" }}>FIND BLOOD</Link>
               </li>
               <li className="nav-item">
-                <a href="#" style={{ color: "black", textDecoration: "none" }}>
+                {/* <a href="#" style={{ color: "black", textDecoration: "none" }}>
                   <strong>TICKET</strong>
-                </a>
+                </a> */}
+                <Link to='/editdetails' style={{ color: "black", textDecoration: "none" }}>EDIT DETAILS</Link>
               </li>
               <li className="nav-item">
                 <a href="#" style={{ color: "black", textDecoration: "none" }}>

@@ -7,6 +7,7 @@ import ViewDetails from "./practice1/ViewDeatils";
 import NavHos from "./practice1/NavHos";
 import AddDetails from "./practice1/AddDeatils";
 import FindBlood from "./practice1/FindBlood";
+import EditDetails from "./practice1/EditDetails";
 // import NavHos from "./practice1/NavHos";
 // import CredOpt from "./practice/CredOpt";
 // import CreateStudent from "./practice/CreateStudent";
@@ -29,6 +30,7 @@ const App: React.FC = () => {
       <Route path="/" element={<ViewDetails/>} />
       <Route path="/adddeatils" element={<AddDetails/>} />
       <Route path="/findblood" element={<FindBlood/>} />
+      <Route path="/editdetails" element={<EditDetails/>} />
 
     </Routes>
     </BrowserRouter>
