@@ -35,6 +35,7 @@ const bloodCompatibility: Record<string, string[]> = {
 };
 
 const FindBlood = () =>{
+    
     const [totalData,settotalData] = useState<Donor[]>([])
     const [bloodG,setbloodG] =useState<string>("A+")
     useEffect(()=>{
@@ -51,10 +52,11 @@ const FindBlood = () =>{
     
     const filterData:Donor[]=totalData?.filter((item)=>bloodCompatibility[bloodG].includes(item.bloodGroup))
 
-    
-
+    const isAuthenticated = sessionStorage.getItem("authentication") === "true";
 
     return (
+        <>
+        {isAuthenticated && 
         <div>
         <label>SELECT BLOOD GROUP</label>
         <select onChange={handleChange} value={bloodG}>
@@ -97,7 +99,9 @@ const FindBlood = () =>{
  
 
         </div>
-    )
+}
+        </>
+    ) 
 }
 
 export default FindBlood

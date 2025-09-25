@@ -8,6 +8,7 @@ import NavHos from "./practice1/NavHos";
 import AddDetails from "./practice1/AddDeatils";
 import FindBlood from "./practice1/FindBlood";
 import EditDetails from "./practice1/EditDetails";
+import LogIn from "./practice1/LogIn";
 // import NavHos from "./practice1/NavHos";
 // import CredOpt from "./practice/CredOpt";
 // import CreateStudent from "./practice/CreateStudent";
@@ -28,6 +29,7 @@ const App: React.FC = () => {
       
       {/* hostpital */}
       <Route path="/" element={<ViewDetails/>} />
+      <Route path="/login" element={<LogIn/>} />
       <Route path="/adddeatils" element={<AddDetails/>} />
       <Route path="/findblood" element={<FindBlood/>} />
       <Route path="/editdetails" element={<EditDetails/>} />

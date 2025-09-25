@@ -1,6 +1,13 @@
-import { Link } from "react-router-dom"
+import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
+
 
 const NavHos = () => {
+
+    const navigate = useNavigate()
+    const [log,setlog]=useState<string>("LOGIN")
+
+
     return (
         <div>
             
@@ -52,7 +59,7 @@ const NavHos = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark me-2" >HEY</button>
+                <button className="btn btn-dark me-2" onClick={()=>{navigate('/login') ; sessionStorage.setItem("authentication","false")}} >{sessionStorage.getItem("authentication")==="true" ? "LOGOUT" : "LOGIN"}</button>
                 <button className="btn btn-danger" >WOW</button>
               </li>
             </ul>
