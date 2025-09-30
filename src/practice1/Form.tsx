@@ -68,7 +68,7 @@ const FormExam = () => {
   useEffect(() => {
     const err = validate();
     setIsValid(Object.keys(err).length === 0 && form.agree);
-  }, [form,validate]);
+  }, [form]);
 
   return (
     <form className="container mt-4 p-3 border rounded shadow" onSubmit={handleSubmit}>
