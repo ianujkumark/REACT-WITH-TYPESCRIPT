@@ -9,6 +9,8 @@ import AddDetails from "./practice1/AddDeatils";
 import FindBlood from "./practice1/FindBlood";
 import EditDetails from "./practice1/EditDetails";
 import LogIn from "./practice1/LogIn";
+import FormExam from "./practice1/form";
+import FormPractise from "./practice1/FormPractice";
 // import NavHos from "./practice1/NavHos";
 // import CredOpt from "./practice/CredOpt";
 // import CreateStudent from "./practice/CreateStudent";
@@ -33,7 +35,7 @@ const App: React.FC = () => {
       <Route path="/adddeatils" element={<AddDetails/>} />
       <Route path="/findblood" element={<FindBlood/>} />
       <Route path="/editdetails" element={<EditDetails/>} />
-
+      <Route path="*" element={<FormPractise/>} />
     </Routes>
     </BrowserRouter>
   );

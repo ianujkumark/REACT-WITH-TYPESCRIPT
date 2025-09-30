@@ -1,12 +1,11 @@
-import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 
 const NavHos = () => {
 
     const navigate = useNavigate()
-    const [log,setlog]=useState<string>("LOGIN")
-
+    // const [log,setlog]=useState<string>("LOGIN")
+    const isAuthenticated = sessionStorage.getItem("authentication") === "true";
 
     return (
         <div>
@@ -30,34 +29,34 @@ const NavHos = () => {
           </div>
           <div className="d-flex align-items-center">
             <ul className="nav align-items-center mb-0" style={{ gap: "30px" }}>
-              <li className="nav-item">
+              { isAuthenticated && (<li className="nav-item">
                 {/* <a href="#" style={{ color: "black", textDecoration: "none" }}>
                   <strong>AUTHENTICS</strong>
                 </a> */}
                 <Link style={{ color: "black", textDecoration: "none" }} to="/adddeatils">REGISTER</Link>
-              </li>
-              <li className="nav-item">
+              </li>)}
+              { isAuthenticated && (<li className="nav-item">
                 {/* <a href="#" style={{ color: "black", textDecoration: "none" }}>
                   <strong>STORE</strong>
                 </a> */}
                 <Link to='/findblood' style={{ color: "black", textDecoration: "none" }}>FIND BLOOD</Link>
-              </li>
-              <li className="nav-item">
+              </li>)}
+              { isAuthenticated && ( <li className="nav-item">
                 {/* <a href="#" style={{ color: "black", textDecoration: "none" }}>
                   <strong>TICKET</strong>
                 </a> */}
                 <Link to='/editdetails' style={{ color: "black", textDecoration: "none" }}>EDIT DETAILS</Link>
-              </li>
-              <li className="nav-item">
+              </li>)}
+              { isAuthenticated && (<li className="nav-item">
                 <a href="#" style={{ color: "black", textDecoration: "none" }}>
                   <strong>HOSPITALITY</strong>
                 </a>
-              </li>
-              <li className="nav-item">
+              </li>)}
+              { isAuthenticated && (<li className="nav-item">
                 <a href="#" style={{ color: "black", textDecoration: "none" }}>
                   <strong>EXPERIANCES</strong>
                 </a>
-              </li>
+              </li>)}
               <li className="nav-item">
                 <button className="btn btn-dark me-2" onClick={()=>{navigate('/login') ; sessionStorage.setItem("authentication","false")}} >{sessionStorage.getItem("authentication")==="true" ? "LOGOUT" : "LOGIN"}</button>
                 <button className="btn btn-danger" >WOW</button>

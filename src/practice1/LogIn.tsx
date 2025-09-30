@@ -34,8 +34,7 @@ const LogIn = () => {
         }})
         .catch((err)=>console.log('error while login',err))       
     }
-
-
+    
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
       <div className="card shadow p-4" style={{ width: "400px" }}>

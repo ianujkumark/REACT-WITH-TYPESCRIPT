@@ -19,7 +19,7 @@ const EditDetails = () => {
     }
 
     axios
-      .patch(`http://localhost:4000/donors/${id}`, { name ,phone })
+      .patch(`http://localhost:4000/donors/${id}`, { name:name ,phone:phone })
       .then(() => setSuc("Successfully updated"))
       .catch(() => setErr("ID not found or update failed"))
   }
